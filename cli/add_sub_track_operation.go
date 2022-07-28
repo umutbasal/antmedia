@@ -65,9 +65,6 @@ func registerOperationBroadcastRestServiceAddSubTrackParamFlags(cmd *cobra.Comma
 	if err := registerOperationBroadcastRestServiceAddSubTrackIDParamFlags("", cmd); err != nil {
 		return err
 	}
-	if err := registerOperationBroadcastRestServiceAddSubTrackIDParamFlags("", cmd); err != nil {
-		return err
-	}
 	return nil
 }
 
