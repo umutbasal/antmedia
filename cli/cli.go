@@ -48,8 +48,9 @@ var maxDepth int = 5
 func makeClient(cmd *cobra.Command, args []string) (*client.AntMediaServerRESTAPIReference, error) {
 	hostname := viper.GetString("hostname")
 	scheme := viper.GetString("scheme")
+	base := viper.GetString("base")
 
-	r := httptransport.New(hostname, client.DefaultBasePath, []string{scheme})
+	r := httptransport.New(hostname, base, []string{scheme})
 	r.SetDebug(debug)
 	// set custom producer and consumer to use the default ones
 
@@ -66,7 +67,7 @@ func makeClient(cmd *cobra.Command, args []string) (*client.AntMediaServerRESTAP
 	// warning: produces text/plain is not supported by go-swagger cli yet
 
 	appCli := client.New(r, strfmt.Default)
-	logDebugf("Server url: %v://%v", scheme, hostname)
+	logDebugf("Server url: %v://%v/%v", scheme, hostname, base)
 	return appCli, nil
 }
 
@@ -84,6 +85,8 @@ func MakeRootCmd() (*cobra.Command, error) {
 	viper.BindPFlag("hostname", rootCmd.PersistentFlags().Lookup("hostname"))
 	rootCmd.PersistentFlags().String("scheme", client.DefaultSchemes[0], fmt.Sprintf("Choose from: %v", client.DefaultSchemes))
 	viper.BindPFlag("scheme", rootCmd.PersistentFlags().Lookup("scheme"))
+	rootCmd.PersistentFlags().String("base", client.DefaultBasePath, fmt.Sprintf("Choose from: %v", client.DefaultBasePath))
+	viper.BindPFlag("base", rootCmd.PersistentFlags().Lookup("base"))
 
 	// configure debug flag
 	rootCmd.PersistentFlags().BoolVar(&debug, "debug", false, "output debug logs")
