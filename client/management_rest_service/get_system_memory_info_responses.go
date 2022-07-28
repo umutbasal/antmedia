@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"antmedia/models"
+	"github.com/umutbasal/antmedia/models"
 )
 
 // GetSystemMemoryInfoReader is a Reader for the GetSystemMemoryInfo structure.

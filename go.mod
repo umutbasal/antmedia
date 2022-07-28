@@ -1,4 +1,4 @@
-module antmedia
+module github.com/umutbasal/antmedia
 
 go 1.18
 

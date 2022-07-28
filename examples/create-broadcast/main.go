@@ -1,13 +1,14 @@
 package main
 
 import (
-	apiclient "antmedia/client"
-	"antmedia/client/broadcast_rest_service"
-	models "antmedia/models"
 	"fmt"
 	"log"
 	"os"
 	"time"
+
+	apiclient "github.com/umutbasal/antmedia/client"
+	"github.com/umutbasal/antmedia/client/broadcast_rest_service"
+	models "github.com/umutbasal/antmedia/models"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-openapi/strfmt"

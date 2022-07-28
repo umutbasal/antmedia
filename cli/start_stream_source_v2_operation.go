@@ -6,9 +6,10 @@ package cli
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"antmedia/client/broadcast_rest_service"
 	"encoding/json"
 	"fmt"
+
+	"github.com/umutbasal/antmedia/client/broadcast_rest_service"
 
 	"github.com/go-openapi/swag"
 	"github.com/spf13/cobra"

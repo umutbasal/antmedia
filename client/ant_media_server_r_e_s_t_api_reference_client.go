@@ -10,10 +10,10 @@ import (
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"antmedia/client/broadcast_rest_service"
-	"antmedia/client/management_rest_service"
-	"antmedia/client/operations"
-	"antmedia/client/vo_d_rest_service"
+	"github.com/umutbasal/antmedia/client/broadcast_rest_service"
+	"github.com/umutbasal/antmedia/client/management_rest_service"
+	"github.com/umutbasal/antmedia/client/operations"
+	"github.com/umutbasal/antmedia/client/vo_d_rest_service"
 )
 
 // Default ant media server r e s t API reference HTTP client.

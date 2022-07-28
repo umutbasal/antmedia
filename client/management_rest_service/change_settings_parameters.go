@@ -15,7 +15,7 @@ import (
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"antmedia/models"
+	"github.com/umutbasal/antmedia/models"
 )
 
 // NewChangeSettingsParams creates a new ChangeSettingsParams object,

@@ -15,7 +15,7 @@ import (
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"antmedia/models"
+	"github.com/umutbasal/antmedia/models"
 )
 
 // NewCreateApplicationParams creates a new CreateApplicationParams object,

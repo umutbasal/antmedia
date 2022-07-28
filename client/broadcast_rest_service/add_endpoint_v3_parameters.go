@@ -16,7 +16,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"antmedia/models"
+	"github.com/umutbasal/antmedia/models"
 )
 
 // NewAddEndpointV3Params creates a new AddEndpointV3Params object,

@@ -1,11 +1,12 @@
 package main
 
 import (
-	apiclient "antmedia/client"
-	"antmedia/client/broadcast_rest_service"
 	"log"
 	"os"
 	"time"
+
+	apiclient "github.com/umutbasal/antmedia/client"
+	"github.com/umutbasal/antmedia/client/broadcast_rest_service"
 
 	"github.com/go-openapi/strfmt"
 	_ "github.com/joho/godotenv/autoload"

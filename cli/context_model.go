@@ -6,8 +6,9 @@ package cli
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"antmedia/models"
 	"fmt"
+
+	"github.com/umutbasal/antmedia/models"
 
 	"github.com/spf13/cobra"
 )

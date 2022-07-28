@@ -6,12 +6,13 @@ package cli
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"antmedia/client"
 	"fmt"
 	"log"
 	"os"
 	"path"
 	"path/filepath"
+
+	"github.com/umutbasal/antmedia/client"
 
 	"github.com/go-openapi/runtime"
 	httptransport "github.com/go-openapi/runtime/client"
