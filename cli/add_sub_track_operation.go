@@ -88,23 +88,6 @@ func registerOperationBroadcastRestServiceAddSubTrackIDParamFlags(cmdPrefix stri
 
 	return nil
 }
-func registerOperationBroadcastRestServiceAddSubTrackIDParamFlags(cmdPrefix string, cmd *cobra.Command) error {
-
-	idDescription := `Required. Subtrack Stream Id`
-
-	var idFlagName string
-	if cmdPrefix == "" {
-		idFlagName = "id"
-	} else {
-		idFlagName = fmt.Sprintf("%v.id", cmdPrefix)
-	}
-
-	var idFlagDefault string
-
-	_ = cmd.PersistentFlags().String(idFlagName, idFlagDefault, idDescription)
-
-	return nil
-}
 
 func retrieveOperationBroadcastRestServiceAddSubTrackIDFlag(m *broadcast_rest_service.AddSubTrackParams, cmdPrefix string, cmd *cobra.Command) (error, bool) {
 	retAdded := false
@@ -121,27 +104,7 @@ func retrieveOperationBroadcastRestServiceAddSubTrackIDFlag(m *broadcast_rest_se
 		if err != nil {
 			return err, false
 		}
-		m.ID = idFlagValue
-
-	}
-	return nil, retAdded
-}
-func retrieveOperationBroadcastRestServiceAddSubTrackIDFlag(m *broadcast_rest_service.AddSubTrackParams, cmdPrefix string, cmd *cobra.Command) (error, bool) {
-	retAdded := false
-	if cmd.Flags().Changed("id") {
-
-		var idFlagName string
-		if cmdPrefix == "" {
-			idFlagName = "id"
-		} else {
-			idFlagName = fmt.Sprintf("%v.id", cmdPrefix)
-		}
-
-		idFlagValue, err := cmd.Flags().GetString(idFlagName)
-		if err != nil {
-			return err, false
-		}
-		m.ID = idFlagValue
+		m.QueryID = idFlagValue
 
 	}
 	return nil, retAdded

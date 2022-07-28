@@ -12,8 +12,6 @@ import (
 
 	"github.com/go-openapi/swag"
 
-	"antmedia/models"
-
 	"github.com/spf13/cobra"
 )
 
