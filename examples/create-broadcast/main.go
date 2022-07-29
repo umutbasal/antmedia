@@ -10,7 +10,6 @@ import (
 	"github.com/umutbasal/antmedia/client/broadcast_rest_service"
 	models "github.com/umutbasal/antmedia/models"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/go-openapi/strfmt"
 	_ "github.com/joho/godotenv/autoload"
 )
@@ -37,7 +36,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	spew.Dump(resp)
 
 	// rtmp url
 	fmt.Printf("RTMP: %s", resp.Payload.RtmpURL)

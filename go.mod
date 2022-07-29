@@ -3,7 +3,6 @@ module github.com/umutbasal/antmedia
 go 1.18
 
 require (
-	github.com/davecgh/go-spew v1.1.1
 	github.com/go-openapi/errors v0.20.2
 	github.com/go-openapi/runtime v0.24.1
 	github.com/go-openapi/strfmt v0.21.3
